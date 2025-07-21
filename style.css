@@ -1,0 +1,665 @@
+ body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #000263;
+      color: #333;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 20px;
+    }
+    header img {
+      height: 199px;
+      margin: 50px;
+      border-radius: 210px;
+    }
+    h1 { font-size: 48px; margin: 10px 0; }
+    h1 span { color: #194875; }
+    p.subtitle { margin: 0; font-size: 16px; color: white; }
+    .button {
+      padding: 12px 14px;
+      font-size: 16px;
+      background-color: yellow;
+      color: black;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: background-color 0.2s;
+    }
+    .button:hover {
+      background-color: #194875;
+    }
+
+    /* Форма заявки */
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    form input {
+      width: 90%;
+      max-width: 300px;
+      margin: 8px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    form .form-button {
+      width: auto;
+      margin-top: 10px;
+    }
+
+    /* Мобильная адаптация */
+    @media (max-width: 768px) {
+      h1 { font-size: 36px; }
+      .button { font-size: 14px; padding: 10px 12px; }
+      form input { width: 80%; }
+      .flip-card { width: 100%; max-width: 300px; height: auto; margin: 0 auto; }
+      .schedule-board { width: 90%; }
+      .project-card { width: 90%; height: auto; margin-bottom: 20px; }
+    }
+    @media (max-width: 480px) {
+      header img { height: 150px; margin: 20px; }
+      h1 { font-size: 28px; }
+      p.subtitle { font-size: 14px; }
+      .button { font-size: 12px; padding: 8px 10px; }
+      form input { width: 100%; max-width: 260px; }
+      .flip-card { max-width: 100%; }
+      .projects p { padding: 0 10px; font-size: 14px; }
+      .filter-buttons { flex-wrap: wrap; }
+      .filter-buttons button { margin: 4px; padding: 8px 12px; font-size: 12px; }
+    }
+
+    /* Модалка */
+    .modal { /* ...без изменений... */ }
+    .overlay { /* ...без изменений... */ }
+
+    .section {
+      padding: 50px 20px;
+	    border-radius:30px;
+  color:white;
+    }
+	section h2{
+	
+	
+	}
+    .section img {
+      width: 200px;
+    }
+    .programs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      color:black;
+	
+    }
+    .program {
+      background: white;
+      margin: 15px;
+      padding: 20px;
+      width: 200px;
+      border-radius: 20px;
+       box-shadow: -10px 0 10px -5px yellow;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+
+    }
+	 .program, .details-card {
+   background: white;
+      margin: 15px;
+      padding: 20px;
+      width: 200px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  }
+
+  .button {
+    margin-top: 10px;
+    padding: 8px 14px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+    .programs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .flip-card {
+    background: transparent;
+    width: 250px;
+    height: 220px;
+    perspective: 1000px;
+	 box-shadow: -10px 0 10px -5px yellow;
+  border-radius: 30px;
+
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+	 box-shadow: -18px 0 10px -5px yellow;
+  border-radius: 30px;
+  }
+
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+    backface-visibility: hidden;
+	
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+
+ .teacher-card {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+	  color:black;
+  }
+
+  .teacher-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  #teacher-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  #teacher-info {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+  }
+
+  #teacher-info li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: transform 0.2s ease, filter 0.2s;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.15);
+    filter: none;
+  }
+
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+	
+  }
+
+  .arrow-button {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    background-color:yellow;
+	color:black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.20s;
+  }
+
+  .arrow-button:hover {
+    background-color: #194875;
+  }
+
+  @media (max-width: 450px) {
+    .teacher-card {
+      padding: 15px;
+    }
+
+    .arrow-button {
+      font-size: 13px;
+
+    }
+
+    .social-icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
+	.katya-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.katya-frame {
+  background: #ffedf1;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 900px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    color:black;
+}
+
+.katya-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.katya-content img {
+  width: 200px;
+  border-radius: 20px;
+}
+
+.katya-text {
+  flex: 1;
+  text-align: left;
+}
+
+.katya-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.katya-text p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.katya-stats {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+}
+	.shape-circle {
+  position: fixed;
+  border-radius: 50%;
+  background:rgba(224, 224, 48, 0.8);
+  width: 150px;
+  height: 150px;
+  top: 50px;
+  left: 20px;
+  z-index: 50;
+  filter: blur(0px);
+  animation: float 6s ease-in-out infinite;
+   pointer-events: none;
+}
+
+.shape-square {
+  position: fixed;
+  background:rgba(224, 224, 48, 0.8);
+  width: 120px;
+  height: 120px;
+  bottom: 80px;
+  right: 30px;
+  transform: rotate(15deg);
+  z-index: 0;
+  filter: blur(0px);
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 1.5s;
+   pointer-events: none;
+}
+
+.shape-triangle {
+  position: fixed;
+  width: 0px;
+  height: 2px;
+  border-left: 110px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 150px solid rgba(224, 224, 48, 0.8);
+  top: 200px;
+  right: 10%;
+  transform: translateX(10%);
+  z-index: 30;
+  filter: blur(0px);
+  animation: float 7s ease-in-out infinite;
+  animation-delay: 0.7s;
+   pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Обязательно, чтобы тело имело позицию для правильного наложения */
+body {
+  position: relative;
+  overflow-x: hidden;
+	
+}
+.overlay {
+  position: fixed;
+  top: 10;
+  left: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 100px;
+  width: 300px;
+  border-radius: 20px;
+  z-index: 101;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Скрытие по умолчанию */
+.hidden {
+  display: none;
+}
+
+/* Закрыть */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+button {
+      padding: 12px 14px;
+      font-size: 16px;
+      background-color: yellow;
+      color: black;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+    button:hover {
+      background-color: #194875;
+	  
+    }
+.schedule-board {
+  max-width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.schedule-board h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color:black;
+}
+
+#work-schedule {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#work-schedule li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  background-color: #000263;
+  transition: background 0.3s;
+}
+
+#work-schedule li.today {
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+}
+ .filter-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filter-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      background-color: yellow;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .filter-buttons button.active,
+    .filter-buttons button:hover {
+      background-color: #194875;
+      color: white;
+    }
+.projects {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+	
+}
+
+.projects h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  
+}
+
+
+.projects p {
+  margin-bottom: 40px;
+  color: white;
+}
+
+.cards-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.project-card {
+  width: 250px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 2px solid yellow;
+  background: white;
+  transition: box-shadow 0.3s;
+}
+
+
+.project-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: center;
+}
+
+/* Цвета по умолчанию */
+.front {
+  border: 2px solid yellow;
+  
+}
+
+.back {
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}	
+.front .emoji {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.front h2 {
+  margin: 0;
+  font-size: 1.2em;
+    color: black;
+}
+
+.front .tagline {
+  margin-top: 10px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.back button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: yellow;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.back button:hover {
+  background: #194875;
+   color: white;
+}
+.back .project-link {
+   margin-top: 20px;
+  padding: 10px 20px;
+  background: yellow;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.back .project-link:hover {
+  background: #194875	;
+     color: white;
+}
+.project-card:hover .front {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+.project-card:hover .back {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+
+/* 🔹 ИНДИВИДУАЛЬНЫЕ ЦВЕТА */
+
+/* Музыкальный клип */
+.project-color-music .front {
+  background: #fff3e0; /* светлый персиковый */
+}
+
+.project-color-music .back {
+  background: #ff9800; /* оранжевый */
+}
+
+/* Цифровая иллюстрация */
+.project-color-art .front {
+  background: #e8f5e9; /* светлый зелёный */
+}
+
+.project-color-art .back {
+  background: #43a047; /* зелёный */
+}
+.project-color-anime .front {
+  background: #9ffca8; /* светлый зелёный */
+}
+
+.project-color-anime .back {
+  background: #41bf4d; /* зелёный */
+}
+
+/* Мини-игра */
+.project-color-game .front {
+  background: #e3f2fd; /* светлый синий */
+}
+
+.project-color-game .back {
+  background: #1976d2; /* яркий синий */
+}

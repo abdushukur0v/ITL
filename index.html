@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ITL</title>
+   <link rel="stylesheet" href="style.css" />
+</head>
+
+
+
+<body>
+<!-- Фигуры на фоне -->
+<div class="shape-circle"></div>
+<div class="shape-square"></div>
+<div class="shape-triangle"></div>
+
+<header>
+   <link rel="stylesheet" href="styles.css" />
+     <button id="open-modal">Регистрация</button>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Регистрация</h2>
+      <form id="register-form">
+        <label for="username">Имя:</label></br>
+        <input type="text" id="username" name="username" required /></br>
+
+        <label for="email">Email:</label></br>
+        <input type="email" id="email" name="email" required /></br>
+
+        <label for="password">Пароль:</label></br>
+        <input type="password" id="password" name="password" required /></br>
+
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Затемнение фона -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <h1><span><img src="айти1.png"></span> </h1>
+  <p class="subtitle">Изучай IT с высококвалифицированными специалистами в любом формате</p>
+  <button class="button" onclick="signUp()">Записаться на урок</button>
+</header>
+
+<div class="section katya-block">
+  <div class="katya-frame">
+    <div class="katya-content">
+      <img src="учительница.jpeg" alt="Катя">
+      <div class="katya-text">
+        <h2>Привет! Я Умутай</h2>
+        <p>
+        В школьные годы я обожала компьютеры: пыталась разобрать, как устроены сайты, и не могла понять, почему учебники объясняют код так скучно. Вместо этого я мечтала о платформе, где можно учиться программированию легко, интересно и в своём ритме.
+        </p>
+        <p>
+      В университете моё увлечение выросло в проект — я начала создавать онлайн-пространство, где ребята могут изучать IT и программирование в своём темпе, с живыми примерами, без зубрёжки и скуки.
+        </p>
+        <p>
+          Так появилась <strong></strong> —  место, где ты разберёшься в HTML, Python, Git и других технологиях, а главное — поверишь в свои силы и начнёшь создавать собственные проекты!
+        </p>
+        <div class="katya-stats">
+          <span>500+ учеников</span> |
+          <span>275 высоких оценок</span> |
+          <span>10+ квалифицированных специалистов</span>
+        </div>
+      </div>
+	   </div>
+       </div></div>
+
+   <div class="schedule-board">
+  <h2>Режим работы</h2>
+  <ul id="work-schedule">
+    <li><span>Понедельник</span><span>09:00 – 18:00</span></li>
+    <li><span>Вторник</span><span>09:00 – 18:00</span></li>
+    <li><span>Среда</span><span>09:00 – 18:00</span></li>
+    <li><span>Четверг</span><span>09:00 – 18:00</span></li>
+    <li><span>Пятница</span><span>09:00 – 18:00</span></li>
+    <li><span>Суббота</span><span>Выходной</span></li>
+    <li><span>Воскресенье</span><span>Выходной</span></li>
+	<li><span>Обед</span><span>12:00 – 13:00</span></li>
+  </ul>
+</div>
+<div class="section">
+  <h2>Программы обучения</h2>
+  <div class="programs">
+    <!-- КАРТОЧКА 1 -->
+  <div class="flip-card" id="flip-card-1">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Основы бухгалтерского учета</h3>
+        <p>10 000 сом</p>
+        <p>2 часа</p>
+        <button class="button" onclick="signUp()">Записаться</button>
+        <button class="button" onclick="flipCard(1)">Подробнее</button>
+      </div>
+      <div class="flip-card-back">
+        <h3>Описание</h3>
+        <p>Базовый курс по бухгалтерии: проводки, баланс, активы, отчётность.</p>
+        <button class="button" onclick="flipCard(1)">Назад</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- КАРТОЧКА 2 -->
+  <div class="flip-card" id="flip-card-2">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>1C Бухгалтерия</h3>
+        <p>15 000 сом</p>
+        <p>2 часа</p>
+        <button class="button" onclick="signUp()">Записаться</button>
+        <button class="button" onclick="flipCard(2)">Подробнее</button>
+      </div>
+      <div class="flip-card-back">
+        <h3>Описание</h3>
+        <p>Практика ведения учета в 1С. Работа с документами и отчетами.</p>
+        <button class="button" onclick="flipCard(2)">Назад</button>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- КАРТОЧКА 3 -->
+  <div class="flip-card" id="flip-card-3">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h3>Основы документооборота</h3>
+        <p>5 000 сом</p>
+        <p>2 часа</p>
+        <button class="button" onclick="signUp()">Записаться</button>
+        <button class="button" onclick="flipCard(3)">Подробнее</button>
+      </div>
+      <div class="flip-card-back">
+        <h3>Описание</h3>
+        <p>Изучение документооборота, регистрация, архивация документов.</p>
+        <button class="button" onclick="flipCard(3)">Назад</button>
+      </div>
+    </div>
+  </div>
+	<!-- КАРТОЧКА 4 -->
+<div class="flip-card" id="flip-card-4">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>IT специалист с нуля</h3>
+      <p>7 400 сом</p>
+      <p>2 часа</p>
+      <button class="button" onclick="signUp()">Записаться</button>
+      <button class="button" onclick="flipCard(4)">Подробнее</button>
+    </div>
+    <div class="flip-card-back">
+      <h3>Описание</h3>
+      <p>Первые шаги в IT: компьютеры, интернет, основы программирования.</p>
+      <button class="button" onclick="flipCard(4)">Назад</button>
+    </div>
+  </div>
+</div>
+
+<!-- КАРТОЧКА 5 -->
+<div class="flip-card" id="flip-card-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>Автоматизация учебного процесса</h3>
+      <p>5 000 сом</p>
+      <p>2 часа</p>
+      <button class="button" onclick="signUp()">Записаться</button>
+      <button class="button" onclick="flipCard(5)">Подробнее</button>
+    </div>
+    <div class="flip-card-back">
+      <h3>Описание</h3>
+      <p>Инструменты для автоматизации: Google Forms, LMS, CRM-системы.</p>
+      <button class="button" onclick="flipCard(5)">Назад</button>
+    </div>
+  </div>
+</div>
+
+<!-- КАРТОЧКА 6 -->
+<div class="flip-card" id="flip-card-6">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>Backend</h3>
+      <p>9 000 сом</p>
+      <p>2 часа</p>
+      <button class="button" onclick="signUp()">Записаться</button>
+      <button class="button" onclick="flipCard(6)">Подробнее</button>
+    </div>
+    <div class="flip-card-back">
+      <h3>Описание</h3>
+      <p>Серверы, базы данных, API, авторизация. Языки: Python, Node.js.</p>
+      <button class="button" onclick="flipCard(6)">Назад</button>
+    </div>
+  </div>
+</div>
+
+<!-- КАРТОЧКА 7 -->
+<div class="flip-card" id="flip-card-7">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>Backend</h3>
+      <p>4 800 сом</p>
+      <p>2 часа</p>
+      <button class="button" onclick="signUp()">Записаться</button>
+      <button class="button" onclick="flipCard(7)">Подробнее</button>
+    </div>
+    <div class="flip-card-back">
+      <h3>Описание</h3>
+      <p>Углубленный backend: REST, GraphQL, оптимизация баз данных.</p>
+      <button class="button" onclick="flipCard(7)">Назад</button>
+    </div>
+  </div>
+</div>
+
+<!-- КАРТОЧКА 8 -->
+<div class="flip-card" id="flip-card-8">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h3>Frontend</h3>
+      <p>7 000 сом</p>
+      <p>2 часа</p>
+      <button class="button" onclick="signUp()">Записаться</button>
+      <button class="button" onclick="flipCard(8)">Подробнее</button>
+    </div>
+    <div class="flip-card-back">
+      <h3>Описание</h3>
+      <p>HTML, CSS, JavaScript, адаптивная вёрстка и фреймворки (React).</p>
+      <button class="button" onclick="flipCard(8)">Назад</button>
+    </div>
+  </div>
+</div>
+</div>
+
+	
+
+<div class="section">
+  <h2>Наши супер преподаватели</h2>
+  <div class="teacher-card">
+  <img id="teacher-img" src="pavel.png" alt="Фото преподавателя" class="teacher-photo">
+  <h2 id="teacher-name">Привет! Меня зовут Павел</h2>
+  <ul id="teacher-info"></ul>
+
+  <div class="social-buttons">
+  
+    <a id="instagram-link" href="https://www.instagram.com/abdushukur0v.m?igsh=anRrYmpzOTU4aXVu" target="_blank" title="Instagram">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" class="social-icon">
+    </a>
+    <a id="telegram-link" href="https://t.me/abdushukur0v" target="_blank" title="Telegram">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg" alt="Telegram" class="social-icon">
+    </a>
+	
+    <a id="whatsapp-link" href="https://wa.me/+996 555 506 103" target="_blank" title="WhatsApp">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" class="social-icon">
+    </a>
+  </div>
+
+  <div class="nav-buttons">
+    <button id="prev-teacher" class="arrow-button">↑ Предыдущий </button>
+    <button id="next-teacher" class="arrow-button">↓ Следующий </button>
+  </div>
+</div>
+
+
+ 
+
+    
+  <section class="projects">
+    <h1>Проекты наших учеников</h1>
+    <p style="text-align:center">От первых шагов до профессиональных работ — смотрите, чего достигают наши студенты</p>
+
+    <!-- Фильтры -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">Все проекты</button>
+      <button class="filter-btn" data-filter="videomontage">Видеомонтаж</button>
+      <button class="filter-btn" data-filter="design">Дизайн</button>
+      <button class="filter-btn" data-filter="web">Веб-сайты</button>
+      <button class="filter-btn" data-filter="games">Игры</button>
+    </div>
+
+    <div class="cards-container">
+      <div class="project-card project-color-music" data-category="videomontage">
+        <div class="project-content">
+          <div class="front">
+            <span class="emoji">📹</span>
+            <h2>Музыкальный клип</h2>
+            <p class="tagline">Творим музыку и визуал</p>
+          </div>
+          <div class="back">
+            <h3>Музыкальный клип</h3>
+            <p>Анна Петрова • 2 месяца обучения</p>
+            <p>After Effects, Premiere Pro</p>
+            <a href="https://www.youtube.com/playlist?list=PLI_7Mg2Z_-4JdNda4LkbSLaF0M5GrnBRG" class="project-link" target="_blank">Смотреть проект</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card project-color-art" data-category="design">
+        <div class="project-content">
+          <div class="front">
+            <span class="emoji">🎨</span>
+            <h2>Цифровая иллюстрация</h2>
+            <p class="tagline">Создаём арт с нуля</p>
+          </div>
+          <div class="back">
+            <h3>Цифровая иллюстрация</h3>
+            <p>Иван Иванов • 4 месяца обучения</p>
+            <p>Photoshop, Procreate</p>
+            <a href="https://sky.pro/wiki/digital-art/cifrovaya-illyustraciya-instrumenty-i-metody/" class="project-link" target="_blank">Смотреть проект</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card project-color-anime" data-category="web">
+        <div class="project-content">
+          <div class="front">
+            <span class="emoji">😄</span>
+            <h2>Сайт для просмотра аниме</h2>
+            <p class="tagline">Создаём сайт с нуля</p>
+          </div>
+          <div class="back">
+            <h3>Сайт для просмотра аниме</h3>
+            <p>Абдушукуров Музаффар • 2 месяца обучения</p>
+            <p>Frontend</p>
+            <a href="главная страница" class="project-link" target="_blank">Смотреть проект</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card project-color-game" data-category="games">
+        <div class="project-content">
+          <div class="front">
+            <span class="emoji">🎮</span>
+            <h2>Мини-игра</h2>
+            <p class="tagline">Первые шаги в геймдеве</p>
+          </div>
+          <div class="back">
+            <h3>Мини-игра</h3>
+            <p>Мария Смирнова • 6 месяцев обучения</p>
+            <p>Unity, C#</p>
+            <a href="https://vseigru.net/mini-igry.html" class="project-link" target="_blank">Смотреть проект</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <header> ... </header>
+  <!-- Секция с формой: -->
+  <div class="section">
+    <h2>Оставь заявку и получай бесплатный урок в подарок!</h2>
+    <form>
+      <input type="text" placeholder="Имя" required>
+      <input type="email" placeholder="Email" required>
+      <button type="submit" class="form-button button">Оставить заявку</button>
+    </form>
+  </div>
+
+<footer>
+  <p>© ITL</p>
+</footer>
+
+
+ <script>
+    function flipCard(id) {
+      const card = document.getElementById(`flip-card-${id}`);
+      card.classList.toggle('flipped');
+    }
+
+    const openModalBtn = document.getElementById('open-modal');
+    const modal = document.getElementById('modal');
+    const overlay = document.getElementById('overlay');
+    const closeModalBtn = document.querySelector('.close');
+
+    openModalBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      overlay.classList.add('hidden');
+    });
+
+    overlay.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      overlay.classList.add('hidden');
+    });
+
+    document.querySelector('form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Спасибо! Мы свяжемся с вами.');
+      e.target.reset();
+    });
+  </script>
+	
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Активная кнопка
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || filter === category) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>	
+
+<script>
+  function signUp() {
+    alert("Вы записались на урок!");
+  }
+
+  function flipCard(id) {
+    const card = document.getElementById(`flip-card-${id}`);
+    card.classList.toggle("flipped");
+  }
+</script>
+
+<script>
+  function signUp() {
+    // Находим кнопку с id "open-modal"
+    const registerButton = document.getElementById('open-modal');
+
+    // Если кнопка найдена, инициируем клик
+    if (registerButton) {
+      registerButton.click();
+    } else {
+      console.warn('Кнопка регистрации не найдена!');
+    }
+  }
+</script>
+
+
+<script>
+  const days = [
+    "Воскресенье",
+    "Понедельник",
+    "Вторник",
+    "Среда",
+    "Четверг",
+    "Пятница",
+    "Суббота"
+  ];
+
+  const todayIndex = new Date().getDay(); // 0 — Воскресенье, 6 — Суббота
+
+  const scheduleItems = document.querySelectorAll("#work-schedule li");
+
+  scheduleItems.forEach((item) => {
+    const dayText = item.querySelector("span").innerText.trim();
+    if (dayText === days[todayIndex]) {
+      item.classList.add("today");
+    }
+  });
+</script> 
+
+<script>const openModalBtn = document.getElementById('open-modal');
+const modal = document.getElementById('modal');
+const overlay = document.getElementById('overlay');
+const closeModalBtn = document.querySelector('.close');
+
+openModalBtn.addEventListener('click', () => {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+});
+
+closeModalBtn.addEventListener('click', () => {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+});
+
+overlay.addEventListener('click', () => {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+});
+</script>
+<script>
+  const teachers = [
+    {
+      img: 'учитель.jpeg',
+      name: 'Привет! Меня зовут Павел',
+      info: [
+        'Преподаю 6 лет',
+        '45 довольных учеников',
+        'Более 1400 уроков',
+        'Помогу полюбить уроки в школе',
+        'Не заставляю, а вовлекаю в обучение',
+        'Знаю, как понятно преподать урок и сделать голову гениальной!'
+      ],
+      instagram: 'https://www.instagram.com/abdushukur0v.m?igsh=anRrYmpzOTU4aXVu',
+      telegram: 'https://t.me/abdushukur0v',
+      whatsapp: 'https://wa.me/qr/3EL6AGGLTQLXO1'
+    },
+    {
+      img: 'учительница1.jpeg',
+      name: 'Привет! Меня зовут Умутай',
+      info: [
+        'Преподаю 4 года',
+        '35 довольных учеников',
+        'Более 900 уроков',
+        'Дружелюбная и терпеливая',
+        'Объясняю сложное простым языком',
+        'Люблю делиться знаниями!'
+      ],
+      instagram: 'https://www.instagram.com/abdushukur0v.m?igsh=anRrYmpzOTU4aXVu',
+      telegram: 'https://t.me/heujle',
+      whatsapp: 'https://wa.me/996776814947'  // убрал пробелы и плюс
+    },
+    {
+      img: 'учитель1.jpeg',
+      name: 'Привет! Меня зовут Виталий',
+      info: [
+        'Преподаю 5 лет',
+        '50 довольных учеников',
+        'Более 1200 уроков',
+        'Задачи — моя страсть!',
+        'Всегда помогаю понять математику с нуля',
+        'Учу без стресса и давления!'
+      ],
+      instagram: 'https://www.instagram.com/abdushukur0v.m?igsh=anRrYmpzOTU4aXVu',
+      telegram: 'https://t.me/abdushukur0v',
+      whatsapp: 'https://wa.me/996555506103' // убрал пробелы и плюс
+    }
+  ];
+
+  let currentTeacher = 0;
+
+  function updateTeacher(index) {
+    const teacher = teachers[index];
+
+    document.getElementById('teacher-img').src = teacher.img;
+    document.getElementById('teacher-name').innerText = teacher.name;
+
+    const infoList = document.getElementById('teacher-info');
+    infoList.innerHTML = '';
+    teacher.info.forEach(item => {
+      const li = document.createElement('li');
+      li.innerText = item;
+      infoList.appendChild(li);
+    });
+
+    // Обновление ссылок
+    document.getElementById('instagram-link').href = teacher.instagram;
+    document.getElementById('telegram-link').href = teacher.telegram;
+    document.getElementById('whatsapp-link').href = teacher.whatsapp;
+  }
+
+  document.getElementById('next-teacher').addEventListener('click', () => {
+    currentTeacher = (currentTeacher + 1) % teachers.length;
+    updateTeacher(currentTeacher);
+  });
+
+  document.getElementById('prev-teacher').addEventListener('click', () => {
+    currentTeacher = (currentTeacher - 1 + teachers.length) % teachers.length;
+    updateTeacher(currentTeacher);
+  });
+
+  // Инициализация при загрузке
+  updateTeacher(currentTeacher);
+</script>
+
+
+
+<script>
+  function signUp() {
+    const name = prompt("Введите ваше имя:");
+    const email = prompt("Введите ваш email:");
+    
+    if (name && email) {
+      alert(`Спасибо, ${name}! Мы свяжемся с вами по адресу ${email}.`);
+      // Здесь можно отправить данные на сервер (например, через fetch)
+    } else {
+      alert("Пожалуйста, заполните все поля.");
+    }
+  }
+</script>
+</body>
+</html>
